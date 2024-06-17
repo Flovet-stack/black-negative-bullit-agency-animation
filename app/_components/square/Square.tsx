@@ -44,7 +44,7 @@ export const Square: React.FC<SquareProps> = ({
     fadeout: () => ({
       opacity: 0,
       transition: {
-        duration: 0,
+        duration: 0.25,
         delay: getRandomNumberBetween0And2(), // this sets the animation time it takes to clear the grid from the screen to 2 seconds
       },
     }),
