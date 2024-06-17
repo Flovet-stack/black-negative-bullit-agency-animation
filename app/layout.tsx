@@ -1,8 +1,24 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import "./globals.scss";
 
-const inter = Inter({ subsets: ["latin"] });
+const AkzidenzGroteskBQ = localFont({
+  display: "swap",
+  variable: "--font-overused-grotesk",
+  src: [
+    {
+      path: "../public/fonts/AkzidenzGroteskBQ-Cnd.ttf",
+      weight: "400",
+      style: "regular",
+    },
+    {
+      path: "../public/fonts/AkzidenzGroteskBQ-MdCnd.ttf",
+      weight: "500",
+      style: "medium",
+    },
+  ],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={AkzidenzGroteskBQ.className}>{children}</body>
     </html>
   );
 }

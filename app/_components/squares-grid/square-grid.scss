@@ -1,0 +1,19 @@
+@import "@/app/globals.scss";
+
+.square-grid {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  .square {
+    background-color: $black;
+    box-sizing: border-box;
+    opacity: 1;
+    &.red {
+      background-color: red;
+    }
+  }
+}
